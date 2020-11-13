@@ -1,0 +1,46 @@
+[
+	{
+		"id": 0,
+		"title": "HTML"
+	},
+	{
+		"id": 1,
+		"title": "CSS"
+	},
+	{
+		"id": 2,
+		"title": "CSS methodologies"
+	},
+	{
+		"id": 3,
+		"title": "CSS preprocessors"
+	},
+	{
+		"id": 4,
+		"title": "Modern CSS"
+	},
+	{
+		"id": 5,
+		"title": "JS"
+	},
+	{
+		"id": 6,
+		"title": "Modern JS"
+	},
+	{
+		"id": 7,
+		"title": "JS frameworks (Angular)"
+	},
+	{
+		"id": 8,
+		"title": "Mocha, Chai"
+	},
+	{
+		"id": 9,
+		"title": "Build tools (Grunt, Gulp)"
+	},
+	{
+		"id": 10,
+		"title": "Agile"
+	}
+]
