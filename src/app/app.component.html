@@ -1347,9 +1347,9 @@
 </style>
 
 <div class="wrapper" #wrapper id="wrapper">
-  <div class="home js-display">
-    <a class="avatar" ui-sref="app.home">
-      <img src="https://media.licdn.com/dms/image/C5603AQGskFVZoIRyIw/profile-displayphoto-shrink_200_200/0?e=1545264000&v=beta&t=T6yEpBLmRzFZRyMsJ_K2lf7M9UOJs634m0nuIY0h3PQ" alt="Nazar Kovtun"
+  <div class="home js-display" [ngClass]="{'js-animate' : ToggleService.switch | async}">
+    <a class="avatar" [routerLink]="['/']" (click)="toggleClick(false)">
+      <img src="assets/images/logo.png" alt="Nazar Kovtun"
            data-track="Go to home" class="avatar-img">
     </a>
     <div class="name-wrapper">
@@ -1365,13 +1365,13 @@
       </div>
 
       <div class="resume-btn-wrapper">
-        <button data-track="View Resume" ui-sref="resume" (click)="toggleClick()" class="resume-btn btn btn-default btn-transparent">
+        <button data-track="View Resume" [routerLink]="['/about']" (click)="toggleClick(true)" class="resume-btn btn btn-default btn-transparent">
           <i class="fa fa-sticky-note-o"></i> resume
         </button>
       </div>
     </div>
   </div>
-  <div class="resume" ng-class="{'js-animate' : toggle}">
+  <div class="resume" [ngClass]="{'js-animate' : ToggleService.switch | async}">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import {Component, ViewEncapsulation, ElementRef, ViewChild} from '@angular/core';
+import {Component, ViewEncapsulation, ElementRef, ViewChild, OnInit, AfterViewInit} from '@angular/core';
+import {ToggleService} from './services/toggle.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,12 @@ import {Component, ViewEncapsulation, ElementRef, ViewChild} from '@angular/core
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('wrapper') myDiv: ElementRef;
+
+  constructor(public ToggleService: ToggleService) {
+
+  }
 
   ngOnInit() {
 
@@ -23,7 +28,7 @@ export class AppComponent {
     this.myDiv.nativeElement.append(pattern.canvas())
   }
 
-  public toggleClick() {
-
+  public toggleClick(isActive: boolean) {
+    this.ToggleService.switch.next(isActive);
   }
 }
