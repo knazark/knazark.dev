@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "github": "ng build --prod --base-href \"https://knazark.github.io/knazark.dev/\""
+    "github": "ng build --prod --base-href \"https://knazark.dev/\"",
+    "upload": "npx angular-cli-ghpages — dir=dist/knazark.dev"
   },
   "private": true,
   "dependencies": {
