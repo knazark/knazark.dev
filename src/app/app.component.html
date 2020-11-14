@@ -1348,7 +1348,7 @@
 
 <div class="wrapper" #wrapper id="wrapper">
   <div class="home js-display" [ngClass]="{'js-animate' : ToggleService.switch | async}">
-    <a class="avatar" [routerLink]="['/']" (click)="toggleClick(false)">
+    <a class="avatar" [routerLink]="['/']">
       <img src="assets/images/logo.png" alt="Nazar Kovtun"
            data-track="Go to home" class="avatar-img">
     </a>
@@ -1365,7 +1365,7 @@
       </div>
 
       <div class="resume-btn-wrapper">
-        <button data-track="View Resume" [routerLink]="['/about']" (click)="toggleClick(true)" class="resume-btn btn btn-default btn-transparent">
+        <button data-track="View Resume" [routerLink]="['/about']" class="resume-btn btn btn-default btn-transparent">
           <i class="fa fa-sticky-note-o"></i> resume
         </button>
       </div>

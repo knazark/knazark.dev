@@ -27,8 +27,4 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     this.myDiv.nativeElement.append(pattern.canvas())
   }
-
-  public toggleClick(isActive: boolean) {
-    this.ToggleService.switch.next(isActive);
-  }
 }

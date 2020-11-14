@@ -21,7 +21,10 @@ export class AboutComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.ToggleService.switch.next(true);
     })
+  }
 
+  ngOnDestroy() {
+    this.ToggleService.switch.next(false);
   }
 
 
