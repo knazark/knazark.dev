@@ -8,8 +8,8 @@
 		"watch": "ng build --watch --configuration development",
 		"lint": "npx eslint 'src/**/*.{ts,html}' --quiet --fix",
 		"format": "npx prettier 'src/**/*.{ts,html}' --write",
-		"deploy": "ng build --prod --base-href \"https://knazark.dev/\" && yarn upload",
-		"upload": "npx angular-cli-ghpages — dir=dist/knazark.dev --cname=knazark.dev",
+		"deploy": "ng build --configuration production --base-href \"https://knazark.dev/\" && yarn upload",
+		"upload": "npx angular-cli-ghpages --dir=dist --cname=knazark.dev",
 		"test": "ng test"
 	},
 	"private": true,
@@ -39,6 +39,7 @@
 		"@types/prettier": "^3.0.0",
 		"@typescript-eslint/eslint-plugin": "^6.19.0",
 		"@typescript-eslint/parser": "^6.19.0",
+		"angular-cli-ghpages": "^1.0.7",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-jasmine": "^4.1.3",
