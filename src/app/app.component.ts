@@ -1,30 +1,14 @@
-import {Component, ViewEncapsulation, ElementRef, ViewChild, OnInit, AfterViewInit} from '@angular/core';
-import {ToggleService} from './services/toggle.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+	selector: 'app-root',
+	standalone: true,
+	imports: [RouterOutlet],
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('wrapper') myDiv: ElementRef;
-
-  constructor(public ToggleService: ToggleService) {
-
-  }
-
-  ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
-    // @ts-ignore
-    const pattern = Trianglify({
-      cell_size: 20,
-      x_colors: ["#001733", "#00364a", "#006464", "#d1b17e", "#eaddcc"]
-    });
-
-    this.myDiv.nativeElement.append(pattern.canvas())
-  }
+export class AppComponent {
+	public readonly title = 'knazark.dev';
 }
