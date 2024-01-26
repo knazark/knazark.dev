@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-	public readonly title = 'knazark.dev';
+	public readonly title = $localize`knazark.dev`;
 }
