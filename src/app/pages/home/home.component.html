@@ -1,0 +1,15 @@
+<p>home works!</p>
+
+<button *actionRule="rules.canUpdate; i18n: codeI18n" i18n type="button" (click)="onUpdateClick()">
+	Update
+</button>
+
+<button *actionRule="rules.canEdit; i18n: codeI18n" i18n type="button" (click)="onEditClick()">
+	Edit
+</button>
+
+<ng-container [actionRuleI18n]="codeI18n">
+	<button *actionRule="rules.canUpdate" i18n type="button" (click)="onUpdateClick()">
+		Update container
+	</button>
+</ng-container>
